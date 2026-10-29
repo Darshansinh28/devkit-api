@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(pytest *)",
+      "Bash(uvicorn *)",
+      "Bash(pip *)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(docker *)"
+    ]
+  }
+}

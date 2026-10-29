@@ -1,0 +1,23 @@
+---
+description: devkit-api project overview and conventions for Cursor
+alwaysApply: true
+---
+
+# devkit-api
+
+Public FastAPI local developer kit (auth, notes, tasks, AI summarize with mock fallback).
+
+## Commands
+
+- Run: `uvicorn app.main:app --reload --port 8000`
+- Test: `pytest -q`
+- Env: copy `.env.example` → `.env`
+
+## Conventions
+
+- Routers thin; logic in `services/` + `store/`
+- New resource = schema + store + router + test + wire in `main.py`
+- JWT on notes/tasks/AI; never commit secrets
+- Do not import private JobAgent code
+
+Claude Code mirrors: `CLAUDE.md`, `.claude/rules/`, `.claude/skills/`

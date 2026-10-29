@@ -1,0 +1,12 @@
+---
+description: FastAPI router and schema conventions
+globs: app/**/*.py
+alwaysApply: false
+---
+
+# FastAPI conventions
+
+- Pydantic v2 models in `app/schemas/`
+- Settings via `get_settings()` in `app/config.py`
+- Auth: `Depends(get_current_user)` from `app/deps.py`
+- Status codes: 201 create, 204 delete, 404 missing, 401/409 as appropriate
